@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Layout from './layout/Layout'
+import Sidebar from './layout/sidebar/Sidebar'
+import Topbar from './layout/topbar/Topbar'
+import Dashboard from "./pages/dashboard/Dashboard"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Riders from './pages/riders/Riders'
+import Payment from './pages/payment/Payment'
+import Learning from './pages/learning/Learning'
+import FAQ from './pages/faq/FAQ'
+import Settings from './pages/settings/Settings'
+import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+const [open, setOpen] = useState(false)
+
+const handle = ()=>{
+  setOpen(!open)
 }
 
-export default App;
+  return (
+    <>
+      <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<Login />} />
+              <Route path='/signup' element={<Signup />} />
+              <Route path="/home" element={<Dashboard />} />
+              <Route path="/riders" element={<Riders />} />
+              <Route path="/payment" element={<Payment />} />
+              <Route path="/learning" element={<Learning />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="*" element={<h1> Page Not Found </h1>} />
+            </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App

@@ -1,0 +1,100 @@
+.openSidebar{
+    left: 0!important;
+}
+.sidebar {
+    background-color: #3d3d3d;
+    box-shadow: rgba(0, 0, 0, 1) 0px 1px 4px;
+    height: 100vh;
+    color: white;
+    width: 18.5%;
+    position: fixed;
+    transition: .3s ease-in-out;
+    z-index: 999;
+    @media screen and (max-width: 1050px) {
+        left: -80%;
+        width: 30%;
+    }
+    @media screen and (max-width: 850px) {
+        width: 35%;
+    }
+    @media screen and (max-width: 720px) {
+        width: 40%;
+    }
+    @media screen and (max-width: 650px) {
+        width: 60%;
+    }
+    @media screen and (max-width: 400px) {
+        width: 70%;
+    }
+    .sidebarTop {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #ffc107;
+        cursor: pointer;
+
+        .headIcon {
+            font-size: 33px;
+            padding-top: 5px;
+        }
+
+        h2 {
+            font-weight: 900;
+            font-size: 26px;
+        }
+    }
+
+    .sidebarBottom {
+        // padding: 30px;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-right: 10px;
+
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                gap: 10px;
+                padding: 10px;
+                margin: 10px 0;
+                font-weight: 600;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: .5s ease-in-out !important;
+
+                &:hover {
+                    background-color: #ffc107;
+                    color: #444;
+
+                }
+            }
+        }
+    }
+
+    .logout {
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-right: 10px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5rem;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .5s ease-in-out !important;
+            font-weight: bold;
+            font-size: 14px;
+            &:hover {
+                background-color: red;
+                color: #fff;
+            }
+        }
+
+    }
+}
