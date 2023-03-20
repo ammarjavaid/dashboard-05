@@ -5,9 +5,11 @@ import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
-import SettingsIcon from '@mui/icons-material/Settings';
+import { BsCreditCard2Front, BsQuestion, BsQuestionCircle, BsTrophy } from 'react-icons/bs';
 import LogoutIcon from '@mui/icons-material/Logout';
-import DriveEtaIcon from '@mui/icons-material/DriveEta';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import PaymentIcon from '@mui/icons-material/Payment';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, signOut } from "firebase/auth";
 
@@ -30,16 +32,16 @@ const logout = ()=>{
     <>
         <div className={`sidebar ${open ? "openSidebar" : ""}`}>
             <div className='sidebarTop'>
-                <span><DriveEtaIcon className='headIcon'/></span><h2> MY TAXI </h2>
+                <h2> ADMIN PANEL </h2>
             </div>
             <div className='sidebarBottom'>
                 <ul>
-                    <Link className='link' to="/home" onClick={handle}><li> <DashboardIcon style={{fontSize: "17px"}}/> <span> Dashboard </span>  </li></Link>
-                    <Link className='link' to="/riders" onClick={handle}><li> <LocalTaxiIcon style={{fontSize: "17px"}}/> <span> Riders </span>  </li></Link>
-                    <Link className='link' to="/payment" onClick={handle}><li> <LocalAtmIcon style={{fontSize: "17px"}}/> <span> Payment Details </span>  </li></Link>
-                    <Link className='link' to="/learning" onClick={handle}><li> <LightbulbIcon style={{fontSize: "17px"}}/> <span> Learning Center </span>  </li></Link>
-                    <Link className='link' to="/faq" onClick={handle}><li> <LiveHelpIcon style={{fontSize: "17px"}}/> <span> FAQ's </span>  </li></Link>
-                    <Link className='link' to="/settings" onClick={handle}><li> <SettingsIcon style={{fontSize: "17px"}}/> <span> Settings </span>  </li></Link>
+                    <Link className='link' to="/home" onClick={handle}><li> <PeopleAltIcon style={{fontSize: "17px"}}/> <span> Users </span>  </li></Link>
+                    <Link className='link' to="/subscription" onClick={handle}><li> <PaymentIcon style={{fontSize: "17px"}}/> <span> Subscription </span>  </li></Link>
+                    <Link className='link' to="/category" onClick={handle}><li> <LocalAtmIcon style={{fontSize: "17px"}}/> <span> Category </span>  </li></Link>
+                    <Link className='link' to="/sub-category" onClick={handle}><li> <LightbulbIcon style={{fontSize: "17px"}}/> <span> Sub Category </span>  </li></Link>
+                    <Link className='link' to="/approve" onClick={handle}><li> <LiveHelpIcon style={{fontSize: "17px"}}/> <span> Approve Ads </span>  </li></Link>
+                    <Link className='link' to="/all-services" onClick={handle}><li> <DesignServicesIcon style={{fontSize: "17px"}}/> <span> All Services </span>  </li></Link>
                 </ul>
             </div>
             <div className='logout'>
@@ -47,6 +49,17 @@ const logout = ()=>{
                 <LogoutIcon style={{fontSize: "17px"}}/><span> Logout </span>
                 </div>
             </div>
+            {/* <div className='sideBarCard'>
+                <BsQuestionCircle className='icon' />
+                <div className='cardContent'>
+                    <div className='circle1'></div>
+                    <div className='circle2'></div>
+
+                    <h3> Help Center </h3>
+                    <p> Having Trouble in Planti, please contact us from for more questions. </p>
+                    <button className='btn'> Go to help center </button>
+                </div>
+            </div> */}
         </div>
     </>
   )

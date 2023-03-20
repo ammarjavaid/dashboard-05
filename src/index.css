@@ -8,16 +8,16 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: black;
+  background-color: black !important;
 }
 
 ::-webkit-scrollbar {
-  background-color: black;
+  background-color: black !important;
   width: 0.4vw;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffc107;
+  background: #5127E5 !important;
 }
 
 .main{
@@ -28,7 +28,7 @@ body {
 }
 
 .layout-2{
-  margin-left: 17%;
+  margin-left: 18%;
 }
 
 @media screen and (max-width: 1050px) {

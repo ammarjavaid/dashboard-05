@@ -11,14 +11,12 @@ const Topbar = ({open, setOpen, handle}) => {
                 <div className="topbar__content">
                     <div className='left'>
                         <div>
-                        <h5> Hi Ammar, </h5>
-                        <h4> Welcome to <span>MY TAXI DASHBOARD</span> </h4>
+                        <h3> Hi Jhon, </h3>
+                        <h4> Welcome to <span>MY Admin Panel</span> </h4>
                         </div>
-                        {open ? <FormatAlignRightIcon className='bars' onClick={handle}/> : <FormatAlignJustifyIcon className='bars' onClick={handle}/>}
                     </div>
                     <div className='right'>
-                        <SearchIcon className='rightIcon'/>
-                        <input type="text" placeholder='SEARCH' />
+                      {open ? <FormatAlignRightIcon className='bars' onClick={handle}/> : <FormatAlignJustifyIcon className='bars' onClick={handle}/>}
                     </div>
                 </div>
             </div>

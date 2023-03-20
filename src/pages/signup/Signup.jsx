@@ -42,6 +42,7 @@ export default function Signup() {
                 </div>
 
                 <div className='btn__login'><button onClick={signupacc}> Signup </button></div>
+                <p style={{ paddingTop: "1rem" }}> <Link to="/forget"> Forget Password? </Link> </p>
                 <p> Already have an account? <Link to="/">Login</Link>  </p>
             </form>
         </>
